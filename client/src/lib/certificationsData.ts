@@ -5,23 +5,23 @@ export const certificationsData = [
     icon: "ShieldCheck"
   },
   {
-    name: "EC Council CICT",
-    issuer: "EC-Council - International Council of E-Commerce Consultants",
+    name: "Security +",
+    issuer: "Comptia",
     icon: "Shield"
   },
   {
-    name: "Azure AZ-900",
-    issuer: "Microsoft - Azure Fundamentals Certification",
+    name: "Microsoft SC-200",
+    issuer: "Microsoft Certified: Security Operations Analyst Associate",
     icon: "Cloud"
   },
   {
-    name: "Stanford Web Security Professional",
-    issuer: "Stanford University - Web Security Professional Program",
-    icon: "Globe"
+    name: "Microsoft MS-900",
+    issuer: "Microsoft 365 Certified: Fundamentals",
+    icon: "Cloud"
   },
   {
-    name: "Google Digital Marketing",
-    issuer: "Google - Digital Marketing Certification",
-    icon: "Database"
-  }
+    name: "ITIL 4 Foundation",
+    issuer: "PeopleCert",
+    icon: "Shield"
+  },
 ];

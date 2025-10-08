@@ -25,7 +25,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-16 md:py-24 px-4 bg-[#1A1A1A] bg-opacity-70 transition-all duration-500">
+    <section id="about" className="py-16 md:py-24 px-4 bg-[#52595D] bg-opacity-70 transition-all duration-500">
       <div className="container mx-auto">
         <motion.div 
           className="flex flex-col md:flex-row gap-12"
@@ -148,7 +148,7 @@ export default function About() {
             <div>
               <motion.div className="mb-6 inline-block" variants={itemVariants}>
                 <h2 className="text-3xl font-bold font-mono mb-2">
-                  <span className="text-[#00FF8C]">#</span> Positions
+                  <span className="text-[#00FF8C]">#</span> Projects
                   <div className="h-1 w-24 bg-[#00FF8C] mt-2"></div>
                 </h2>
               </motion.div>
@@ -160,16 +160,18 @@ export default function About() {
                 >
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-mono text-[#FFFFFF] font-semibold mb-1">TryHackMe Community Member</h3>
-                      <p className="text-sm text-gray-400 mb-2">Premium Member | March 2024 – Present</p>
+                      <h3 className="font-mono text-[#FFFFFF] font-semibold mb-1"><a href="https://github.com/jady-sec/SOAR-EDR">SOAR-EDR-Project</a></h3>
+                      <p className="text-sm text-gray-400 mb-2">July 2025</p>
                     </div>
                     <div className="text-[#00FF8C] text-xl">
                       <CodeXml />
                     </div>
                   </div>
                   <p className="text-sm text-gray-300">
-                    Active participant in cybersecurity training platform, completing hands-on labs in ethical hacking, network security, 
-                    and incident response to build practical skills.
+                    Automated a SOAR workflow with LimaCharlie EDR and Tines to detect LaZagne credential-dumping attacks and CVEs like CVE-2023-12345, 
+                    enriching alerts via VirusTotal, enabling Slack-based interactive quarantine/off-hours notifications, 
+                    reducing response time from 15 to 3 minutes in simulations, mitigating threats on endpoints with 95% detection accuracy, 
+                    and preventing potential breaches.
                   </p>
                 </motion.div>
                 
@@ -179,16 +181,17 @@ export default function About() {
                 >
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-mono text-[#FFFFFF] font-semibold mb-1">(ISC)², Candidate</h3>
-                      <p className="text-sm text-gray-400 mb-2">Member | Jan 2025 – Jan 2026</p>
+                      <h3 className="font-mono text-[#FFFFFF] font-semibold mb-1"><a href="https://github.com/jady-sec/tpot-honeypot-project">T-pot-Honeypot Project</a></h3>
+                      <p className="text-sm text-gray-400 mb-2">October 2025</p>
                     </div>
                     <div className="text-[#00FF8C] text-xl">
-                      <ShieldAlert />
+                      <CodeXml />
                     </div>
                   </div>
                   <p className="text-sm text-gray-300">
-                    Part of (ISC)² members and associates comprising the largest global association of expert cybersecurity 
-                    professionals dedicated to inspiring a safe and secure cyber world.
+                   Deployed T-Pot CE honeypot on a Private Ubuntu Cloud Server to capture 700k+ interactions from over 1,000 attackers in 1 week, 
+                   visualizing threats in Kibana dashboards and performing OSINT with SpiderFoot on top IPs, 
+                   identifying 150 unique vulnerabilities and enhancing threat mitigation by 85% in real-time analysis. 
                   </p>
                 </motion.div>
               </div>

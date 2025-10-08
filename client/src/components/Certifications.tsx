@@ -69,7 +69,7 @@ export default function Certifications() {
                   {icons[certification.icon as keyof typeof icons]}
                 </div>
               </div>
-              <h3 className="font-mono text-lg font-semibold text-center mb-3">{certification.name}</h3>
+              <h3 className="font-mono text-lg font-semibold text-center mb-3 text-[#FFFFFF]">{certification.name}</h3>
               <div className="border-t border-gray-800 pt-3 mt-4">
                 <p className="text-xs text-gray-400 text-center">{certification.issuer}</p>
               </div>
@@ -83,7 +83,7 @@ export default function Certifications() {
             <div className="text-gray-400 text-center mb-4">
               {icons.Plus}
             </div>
-            <h3 className="font-mono text-lg font-semibold text-center">Pursuing New Certifications</h3>
+            <h3 className="font-mono text-lg font-semibold text-center text-[#FFFFFF]">Pursuing New Certifications</h3>
             <p className="text-sm text-gray-400 text-center mt-2">Always expanding my knowledge in cybersecurity</p>
           </motion.div>
         </motion.div>

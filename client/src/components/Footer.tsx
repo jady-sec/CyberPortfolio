@@ -19,12 +19,6 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="mb-4 md:mb-0">
-            <p className="font-mono text-gray-400 text-sm">
-              <span className="text-[#00FF8C]">&copy;</span> {new Date().getFullYear()} Farhan Ansari. All rights reserved.
-            </p>
-          </div>
-          
           <div className="flex items-center space-x-4">
             <button 
               onClick={scrollToTop} 

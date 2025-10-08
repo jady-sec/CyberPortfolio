@@ -28,8 +28,8 @@ export default function Experience() {
   const getCompanyLogo = (company: string) => {
     if (company.includes("Nova")) {
       return "/assets/nova_logo.jpeg";
-    } else if (company.includes("EF EDUCATION")) {
-      return "/assets/EF_logo.jpeg";
+    } else if (company.includes("Virtusa")) {
+      return "/assets/virtusa.jpeg";
     }
     return null;
   };
@@ -48,7 +48,7 @@ export default function Experience() {
             <span className="text-[#00FF8C]">#</span> Professional Experience
             <div className="h-1 w-36 bg-[#00FF8C] mt-2 mx-auto"></div>
           </h2>
-          <p className="text-[#000000]-400 max-w-2xl mx-auto">A timeline of my cybersecurity journey across various organizations</p>
+          <p className="text-[#000000]-400 max-w-2xl mx-auto">A timeline of my professional journey across various organizations</p>
         </motion.div>
         
         <div className="relative">
@@ -73,7 +73,7 @@ export default function Experience() {
                   <div className="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right order-2 md:order-1">
                     <div className="bg-[#1A1A1A] bg-opacity-80 p-5 rounded-lg mb-4 hover:shadow-lg hover:shadow-[#00FF8C]/10 transition-all duration-300 border border-[#00FF8C]/30">
                       <h3 className="font-mono text-xl mb-2">
-                        <span className="text-[#00FF8C]">$</span> {experience.title}
+                        <span className="text-[#00FF8C]">$</span> <span className="text-[#FFFFFF]">{experience.title}</span>
                       </h3>
                       <p className="text-gray-400 mb-2">{experience.period}</p>
                     </div>

@@ -19,7 +19,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-16 md:py-24 px-4 bg-[#1A1A1A] bg-opacity-70 transition-all duration-500">
+    <section id="skills" className="py-16 md:py-24 px-4 bg-[#52595D] bg-opacity-70 transition-all duration-500">
       <div className="container mx-auto">
         <motion.div 
           className="mb-12 text-center"
@@ -29,10 +29,10 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold font-mono mb-4 inline-block relative">
-            <span className="text-[#00FF8C]">#</span> Technical Skills
+            <span className="text-[#00FF8C]">#</span> <span className='text-[#000000]'>Technical Skills</span>
             <div className="h-1 w-36 bg-[#00FF8C] mt-2 mx-auto"></div>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">Core competencies and technical expertise</p>
+          <p className="text-black-400 font-bold max-w-2xl mx-auto">Core competencies and technical expertise</p>
         </motion.div>
         
         <motion.div 
@@ -51,7 +51,7 @@ export default function Skills() {
               {skillsData.cybersecurity.map((skill, index) => (
                 <div key={index}>
                   <div className="flex justify-between mb-1">
-                    <span className="font-mono text-sm">{skill.name}</span>
+                    <span className="font-mono font-bold text-sm">{skill.name}</span>
                   </div>
                   <div className="w-full bg-gray-800 rounded-full h-2.5">
                     <div 
@@ -81,7 +81,7 @@ export default function Skills() {
                     <h4 className="font-mono text-sm font-semibold mb-2 text-[#00FF8C]">{category}</h4>
                     <div className="flex flex-wrap gap-2">
                       {skills.map((skill, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-[#1A1A1A] rounded text-xs font-mono border border-gray-800">
+                        <span key={idx} className="px-2 py-1 bg-[#1A1A1A] text-white rounded text-xs font-mono border border-gray-800">
                           {skill}
                         </span>
                       ))}

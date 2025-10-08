@@ -1,31 +1,32 @@
 export const skillsData = {
   cybersecurity: [
-    { name: "Vulnerability Assessment", percentage: 92 },
-    { name: "Endpoint Security", percentage: 88 },
-    { name: "Cloud Security (Azure/AWS)", percentage: 85 },
+    { name: "Vulnerability Assessment", percentage: 95 },
+    { name: "Endpoint Detection and Response", percentage: 88 },
+    { name: "Cloud Security (Azure)", percentage: 85 },
     { name: "Threat Intelligence", percentage: 90 },
-    { name: "Security Protocols", percentage: 94 },
+    { name: "Scripting and Automation", percentage: 85 },
     { name: "Penetration Testing", percentage: 82 },
     { name: "Security Architecture", percentage: 86 },
-    { name: "Incident Response", percentage: 89 },
-    { name: "Malware Analysis", percentage: 80 }
+    { name: "Incident Response Planning", percentage: 89 },
+    { name: "Malware Analysis", percentage: 87 }
   ],
   technicalStack: {
-    "Programming": ["JavaScript", "Python", "Bash", "C", "PowerShell"],
     "Security Tools": [
-      "Azure Sentinel", 
+      "Microsoft Sentinel", 
       "Microsoft Defender", 
-      "SIEM", 
+      "Limacharlie", 
       "Wireshark", 
       "Nmap", 
+      "Kali Linux",
       "Burp Suite", 
       "Metasploit"
     ],
-    "Cloud Platforms": ["Azure", "AWS", "Google Cloud"],
+    "Programming": ["JavaScript", "Python", "Bash", "C", "PowerShell"],
+    "Cloud Platforms": ["Azure", "AWS", "Google Cloud", "Vultr"],
     "Protocols & Standards": [
-      "SPF", 
-      "DKIM", 
-      "DMARC", 
+      "PCI DSS", 
+      "SOC 2", 
+      "CIS Controls", 
       "Encryption", 
       "OAuth", 
       "SAML", 
@@ -33,8 +34,7 @@ export const skillsData = {
       "NIST Framework"
     ],
     "Additional Skills": [
-      "CRM Software", 
-      "Digital Marketing", 
+      "Risk Assessment",  
       "ISO 27001", 
       "EDR Systems", 
       "SOAR Solutions", 

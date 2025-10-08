@@ -35,9 +35,9 @@ export default function Testimonials() {
   };
   
   const relationColors: Record<string, string> = {
-    "Client": "bg-blue-500/20 text-blue-300 border-blue-500/30",
-    "Colleague": "bg-green-500/20 text-green-300 border-green-500/30",
-    "Manager": "bg-purple-500/20 text-purple-300 border-purple-500/30",
+    "Professor": "bg-blue-500/20 text-black-300 border-blue-500/30",
+    "Colleague": "bg-green-500/20 text-black-300 border-green-500/30",
+    "Manager": "bg-purple-500/20 text-black-300 border-purple-500/30",
     "Research Mentor": "bg-amber-500/20 text-amber-300 border-amber-500/30"
   };
   
@@ -55,7 +55,7 @@ export default function Testimonials() {
             <span className="text-[#00FF8C]">#</span> Testimonials
             <div className="h-1 w-36 bg-[#00FF8C] mt-2 mx-auto"></div>
           </h2>
-          <p className={`max-w-2xl mx-auto theme-text`}>What colleagues and clients say about my work</p>
+          <p className={`max-w-2xl mx-auto theme-text`}><span className="text-black">What people say about my work</span></p>
         </motion.div>
         
         <div className="max-w-4xl mx-auto">
@@ -95,7 +95,7 @@ export default function Testimonials() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-xl font-semibold">{testimonialsData[activeIndex].name}</h3>
-                      <p className="text-sm text-gray-400 mb-2">{testimonialsData[activeIndex].position}</p>
+                      <p className="text-sm text-black-400 mb-2">{testimonialsData[activeIndex].position}</p>
                     </div>
                     <span className={`text-xs px-2 py-1 rounded-full border ${relationColors[testimonialsData[activeIndex].relation] || "bg-gray-700/20 text-gray-300 border-gray-700/30"}`}>
                       {testimonialsData[activeIndex].relation}
@@ -104,7 +104,7 @@ export default function Testimonials() {
                   
                   <div className="mt-4 relative">
                     <MessageSquareQuote className="absolute -top-2 -left-2 w-5 h-5 text-[#00FF8C] opacity-40" />
-                    <p className="pl-4 text-white italic">"{testimonialsData[activeIndex].testimonial}"</p>
+                    <p className="pl-4 text-black italic">"{testimonialsData[activeIndex].testimonial}"</p>
                   </div>
                 </div>
               </div>
