@@ -47,15 +47,17 @@ export default function About() {
               variants={itemVariants}
             >
               <p className="mb-6 text-gray-300">
-                I am a dedicated cybersecurity professional with experience in implementing and maintaining security protocols, 
-                conducting vulnerability assessments, and enhancing organizational security posture. Currently serving as a 
-                Security Associate at Rapidops Inc., I am passionate about staying ahead of emerging cyber threats.
+                I'm a driven cybersecurity graduate passionate about unraveling digital threats and building resilient defenses. 
+                Skilled in blending innovative tools with strategic thinking, 
+                I excel at transforming complex challenges into actionable solutions—like outsmarting attackers and securing systems. 
+                Let's collaborate and advance security together!
               </p>
               
               <p className="text-gray-300">
-                With a proven track record across multiple roles in the cybersecurity domain, I have successfully implemented 
-                security solutions that reduced vulnerabilities, managed endpoint security for large organizations, and 
-                contributed to ISO 27001 framework implementation to reinforce information security protocols.
+                As a dedicated cybersecurity graduate with hands-on experience as a Security Analyst at Nova Mutual Insurance, 
+                I have contributed to threat detection, incident response planning, and regulatory compliance in a dynamic small-business environment, 
+                while developing automated SOAR workflows to detect and respond to credential-dumping threats using tools like LimaCharlie EDR and Tines, 
+                and deploying honeypot systems for real-time threat capture and OSINT analysis with SpiderFoot to enhance proactive security measures.
               </p>
             </motion.div>
             
@@ -67,8 +69,8 @@ export default function About() {
                 <div className="text-[#00FF8C] text-2xl mb-2">
                   <ShieldCheck />
                 </div>
-                <h3 className="font-mono font-semibold mb-2">Security Analysis</h3>
-                <p className="text-sm text-gray-400">Experienced in vulnerability assessment and penetration testing</p>
+                <h3 className="font-mono font-semibold mb-2 text-white">Security Analysis</h3>
+                <p className="text-sm text-gray-400">Experienced in threat detection and incident response planning</p>
               </motion.div>
               
               <motion.div 
@@ -78,8 +80,8 @@ export default function About() {
                 <div className="text-[#00FF8C] text-2xl mb-2">
                   <Cloud />
                 </div>
-                <h3 className="font-mono font-semibold mb-2">Cloud Security</h3>
-                <p className="text-sm text-gray-400">Expertise in Azure and AWS security implementations</p>
+                <h3 className="font-mono font-semibold mb-2 text-white">Cloud Security</h3>
+                <p className="text-sm text-gray-400">Expertise in Azure security implementations</p>
               </motion.div>
               
               <motion.div 
@@ -89,8 +91,8 @@ export default function About() {
                 <div className="text-[#00FF8C] text-2xl mb-2">
                   <AlertTriangle />
                 </div>
-                <h3 className="font-mono font-semibold mb-2">Threat Intelligence</h3>
-                <p className="text-sm text-gray-400">Proactive identification and mitigation of security threats</p>
+                <h3 className="font-mono font-semibold mb-2 text-white">Threat Intelligence</h3>
+                <p className="text-sm text-gray-400">Skilled in OSINT reconnaissance and threat mitigation</p>
               </motion.div>
               
               <motion.div 
@@ -100,8 +102,8 @@ export default function About() {
                 <div className="text-[#00FF8C] text-2xl mb-2">
                   <Monitor />
                 </div>
-                <h3 className="font-mono font-semibold mb-2">Endpoint Security</h3>
-                <p className="text-sm text-gray-400">Implementation of robust endpoint protection solutions</p>
+                <h3 className="font-mono font-semibold mb-2 text-white">Endpoint Security</h3>
+                <p className="text-sm text-gray-400">Experienced in EDR implementation and automated responses</p>
               </motion.div>
             </div>
           </div>
@@ -120,18 +122,26 @@ export default function About() {
             >
               <div className="mb-6">
                 <h3 className="font-mono text-xl mb-2">
-                  <span className="text-[#00FF8C]">{'>'}</span> Bachelor of Engineering, Computer Engineering
+                  <span className="text-[#00FF8C]">{'>'}</span> <span className="text-white">Postgraduate Diploma, Cybersecurity Response Planning</span>
                 </h3>
-                <p className="text-gray-400 mb-1">GUJARAT TECHNOLOGICAL UNIVERSITY</p>
-                <p className="text-sm mb-1">Ahmedabad, Gujarat</p>
+                <p className="text-gray-400 mb-1">CONESTOGA COLLEGE</p>
+                <p className="text-[#808080] text-sm mb-1">Waterloo, Ontario</p>
               </div>
               
               <div>
                 <h3 className="font-mono text-xl mb-2">
-                  <span className="text-[#00FF8C]">{'>'}</span> Diploma in Information Technology
+                  <span className="text-[#00FF8C]">{'>'}</span> <span className="text-white">Postgraduate Diploma, Computer Application Security</span>
                 </h3>
-                <p className="text-gray-400 mb-1">MAHARAJA SAYAJIRAO UNIVERSITY</p>
-                <p className="text-sm mb-1">Vadodara, Gujarat</p>
+                <p className="text-gray-400 mb-1">CONESTOGA COLLEGE</p>
+                <p className="text-[#808080] text-sm mb-1">Waterloo, Ontario</p>
+              </div>
+
+              <div>
+                <h3 className="font-mono text-xl mb-2">
+                  <span className="text-[#00FF8C]">{'>'}</span> <span className="text-white">Bachelors in Computer Engineering</span>
+                </h3>
+                <p className="text-gray-400 mb-1">ANNA UNIVERSITY</p>
+                <p className="text-[#808080] text-sm mb-1">Chennai, India</p>
               </div>
             </motion.div>
             
@@ -150,16 +160,16 @@ export default function About() {
                 >
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-mono font-semibold mb-1">Google Developer Group, Baroda</h3>
-                      <p className="text-sm text-gray-400 mb-2">Member | March 2021 – Present</p>
+                      <h3 className="font-mono text-[#FFFFFF] font-semibold mb-1">TryHackMe Community Member</h3>
+                      <p className="text-sm text-gray-400 mb-2">Premium Member | March 2024 – Present</p>
                     </div>
                     <div className="text-[#00FF8C] text-xl">
                       <CodeXml />
                     </div>
                   </div>
                   <p className="text-sm text-gray-300">
-                    Contributed to online forums and community support channels, resolving 50+ technical inquiries. 
-                    Organized quarterly networking events with 500+ participants across 3 cities in Gujarat.
+                    Active participant in cybersecurity training platform, completing hands-on labs in ethical hacking, network security, 
+                    and incident response to build practical skills.
                   </p>
                 </motion.div>
                 
@@ -169,8 +179,8 @@ export default function About() {
                 >
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-mono font-semibold mb-1">(ISC)², Candidate</h3>
-                      <p className="text-sm text-gray-400 mb-2">Member | Jun 2016 – Jun 2017</p>
+                      <h3 className="font-mono text-[#FFFFFF] font-semibold mb-1">(ISC)², Candidate</h3>
+                      <p className="text-sm text-gray-400 mb-2">Member | Jan 2025 – Jan 2026</p>
                     </div>
                     <div className="text-[#00FF8C] text-xl">
                       <ShieldAlert />

@@ -26,8 +26,8 @@ export default function Experience() {
 
   // Function to get the logo based on company name
   const getCompanyLogo = (company: string) => {
-    if (company.includes("RAPIDOPS")) {
-      return "/assets/rapidops_logo.jpg";
+    if (company.includes("Nova")) {
+      return "/assets/nova_logo.jpeg";
     } else if (company.includes("EF EDUCATION")) {
       return "/assets/EF_logo.jpeg";
     }
@@ -48,7 +48,7 @@ export default function Experience() {
             <span className="text-[#00FF8C]">#</span> Professional Experience
             <div className="h-1 w-36 bg-[#00FF8C] mt-2 mx-auto"></div>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">A timeline of my cybersecurity journey across various organizations</p>
+          <p className="text-[#000000]-400 max-w-2xl mx-auto">A timeline of my cybersecurity journey across various organizations</p>
         </motion.div>
         
         <div className="relative">

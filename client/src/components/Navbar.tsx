@@ -40,7 +40,7 @@ export default function Navbar() {
     }`}>
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-[#00FF8C] font-mono text-xl font-semibold">&gt;_farhan.sh</span>
+          <span className="text-[#00FF8C] font-mono text-xl font-semibold">&gt;_jady.sh</span>
         </div>
 
         <div className="hidden md:flex items-center">
@@ -51,7 +51,6 @@ export default function Navbar() {
             <a href="#certifications" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Certifications</a>
             <a href="#testimonials" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Testimonials</a>
             <a href="#contact" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Contact</a>
-            <a href="https://medium.com/@fxrhanansari" target="_blank" rel="noopener noreferrer" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Blog</a>
           </div>
         </div>
 

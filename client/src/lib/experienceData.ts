@@ -1,9 +1,9 @@
 export const experienceData = [
   {
-    company: "RAPIDOPS INC.",
-    location: "Ahmedabad, Gujarat",
-    title: "Security Associate",
-    period: "January 2024 – Present",
+    company: "Nova Mutual Insurance.",
+    location: "Jarvis, Ontario",
+    title: "Cybersecurity Analyst",
+    period: "September 2025 – Present",
     icon: "ShieldCheck",
     responsibilities: [
       "Provided direct support to clients, addressing cyber security concerns and assisting with security-related inquiries",
