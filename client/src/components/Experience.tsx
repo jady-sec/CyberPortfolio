@@ -46,7 +46,7 @@ export default function Experience() {
         >
           <h2 className="text-3xl font-bold font-mono mb-4 inline-block relative">
             <span className="text-[#00FF8C]">#</span> Professional Experience
-            <div className="h-1 w-36 bg-[#00FF8C] mt-2 mx-auto"></div>
+            <div className="h-1 w-36 bg-[#000000] mt-2 mx-auto"></div>
           </h2>
           <p className="text-[#000000]-400 max-w-2xl mx-auto">A timeline of my professional journey across various organizations</p>
         </motion.div>
