@@ -1,10 +1,7 @@
-# Cybersecurity Portfolio - Farhan Ansari
+# Cybersecurity Portfolio - Joseph Daniel Charles
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, designed to showcase cybersecurity skills and professional experience.
 
-<a href="client/public/portfolio-preview.png" target="_blank">
-  <img src="client/public/portfolio-preview.png" alt="Portfolio Preview" />
-</a>
 
 ## 🚀 Features
 
@@ -88,13 +85,3 @@ The site uses CSS variables for theming. Main colors and styling can be modified
 Update your personal information and site content in the respective component files or data files in `client/src/lib/`.
 
 
-
-## 📞 Contact
-
-Farhan Ansari - [fxrhanansari@gmail.com](mailto:fxrhanansari@gmail.com)
-
-Project Link: [https://github.com/fxrhan/CyberPortfolio](https://github.com/fxrhan/CyberPortfolio)
-
----
-
-Built with ❤️ by Farhan Ansari 
