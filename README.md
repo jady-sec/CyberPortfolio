@@ -1,10 +1,7 @@
-# Cybersecurity Portfolio - Farhan Ansari
+# Cybersecurity Portfolio - Joseph Daniel Charles
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, designed to showcase cybersecurity skills and professional experience.
 
-<a href="client/public/portfolio-preview.png" target="_blank">
-  <img src="client/public/portfolio-preview.png" alt="Portfolio Preview" />
-</a>
 
 ## 🚀 Features
 
@@ -40,61 +37,9 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Testimonials**: Client and colleague feedback
 - **Contact**: Contact form and information
 
-## 🔧 Getting Started
-
-### Prerequisites
-
-- Node.js (v16+)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/fxrhan/CyberPortfolio.git
-   cd CyberPortfolio
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open your browser and navigate to `http://localhost:5173`
-
 ## 🔄 Contact Form
 
 The contact form is configured to work with Netlify Forms. When deployed to Netlify, form submissions will be available in the Netlify dashboard under the "Forms" tab.
 
-## 🎨 Customization
-
-### Theming
-
-The site uses CSS variables for theming. Main colors and styling can be modified in:
-- `client/src/index.css` - For base styling and variables
-- `tailwind.config.ts` - For Tailwind CSS configuration
-
-### Content
-
-Update your personal information and site content in the respective component files or data files in `client/src/lib/`.
 
 
-
-## 📞 Contact
-
-Farhan Ansari - [fxrhanansari@gmail.com](mailto:fxrhanansari@gmail.com)
-
-Project Link: [https://github.com/fxrhan/CyberPortfolio](https://github.com/fxrhan/CyberPortfolio)
-
----
-
-Built with ❤️ by Farhan Ansari 
