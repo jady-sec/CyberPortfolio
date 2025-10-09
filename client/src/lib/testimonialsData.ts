@@ -2,7 +2,7 @@ export const testimonialsData = [
 {
     name: "Phil Moura",
     position: "CIO at Nova Mutual Insurance",
-    testimonial: "Joseph has been an invaluable asset to our cybersecurity team at Nova Mutual Insurance, consistently demonstrating exceptional analytical skills in threat detection, incident response planning, and regulatory compliance. His Proof of Concept for Microsoft Sentinel enhanced our monitoring capabilities, while he effectively remediated threats in Microsoft Defender and devised a detailed cyberattack action plan that strengthened our defenses against potential breaches. We're fortunate to have such a dedicated and forward-thinking analyst on board. ",
+    testimonial: "Joseph originally joined us as a co-op student taking the Cybersecurity Response Planning Program at Conestoga College. During his time with us, Joseph brought forward and implemented several solutions to harden our security stance, and also educated us on what we needed to do to ensure a secure landscape. Josephs eagerness to learn, along with his ability to dive into different ideas and paths are incredible strengths that would benefit any company he works with.",
     relation: "Manager",
     image: "/assets/testimonials/phil.jpeg",
     localImage: "/assets/testimonials/phil.jpeg"
