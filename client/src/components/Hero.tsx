@@ -3,7 +3,7 @@ import useTypewriter from "@/hooks/useTypewriter";
 
 export default function Hero() {
   const name = useTypewriter("JOSEPH DANIEL CHARLES", 100);
-  const title = useTypewriter("Security Analyst at Nova Mutual Insurance.", 50, 1200);
+  const title = useTypewriter("Cybersecurity Analyst at Nova Mutual Insurance.", 50, 1200);
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4 relative overflow-hidden">

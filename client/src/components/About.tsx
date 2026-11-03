@@ -54,7 +54,7 @@ export default function About() {
               </p>
               
               <p className="text-gray-300">
-                As a dedicated cybersecurity graduate with hands-on experience as a Security Analyst at Nova Mutual Insurance, 
+                As a dedicated cybersecurity graduate with hands-on experience as a Cybersecurity Analyst at Nova Mutual Insurance, 
                 I have contributed to threat detection, incident response planning, and regulatory compliance in a dynamic small-business environment, 
                 while developing automated SOAR workflows to detect and respond to credential-dumping threats using tools like LimaCharlie EDR and Tines, 
                 and deploying honeypot systems for real-time threat capture and OSINT analysis with SpiderFoot to enhance proactive security measures.
@@ -168,9 +168,9 @@ export default function About() {
                     </div>
                   </div>
                   <p className="text-sm text-gray-300">
-                    Automated a SOAR workflow with LimaCharlie EDR and Tines to detect LaZagne credential-dumping attacks and CVEs like CVE-2023-12345, 
+                    Automated a SOAR workflow with LimaCharlie EDR and Tines to detect LaZagne credential-dumping attacks, 
                     enriching alerts via VirusTotal, enabling Slack-based interactive quarantine/off-hours notifications, 
-                    reducing response time from 15 to 3 minutes in simulations, mitigating threats on endpoints with 95% detection accuracy, 
+                    reducing response time from 15 to 3 minutes in simulations, mitigating threats on endpoints, 
                     and preventing potential breaches.
                   </p>
                 </motion.div>
@@ -191,7 +191,7 @@ export default function About() {
                   <p className="text-sm text-gray-300">
                    Deployed T-Pot CE honeypot on a Private Ubuntu Cloud Server to capture 700k+ interactions from over 1,000 attackers in 1 week, 
                    visualizing threats in Kibana dashboards and performing OSINT with SpiderFoot on top IPs, 
-                   identifying 150 unique vulnerabilities and enhancing threat mitigation by 85% in real-time analysis. 
+                   identifying 150 unique vulnerabilities. 
                   </p>
                 </motion.div>
               </div>

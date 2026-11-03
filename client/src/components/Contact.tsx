@@ -208,7 +208,7 @@ export default function Contact() {
               <h3 className="font-mono text-xl font-semibold mb-4 flex items-center">
                 <MapPin className="text-[#00FF8C] mr-2" /> Location
               </h3>
-              <p className="text-gray-300 mb-2">Toronto, Ontario</p>
+              <p className="text-gray-300 mb-2">Ontario, Canada</p>
             </div>
             
             <div className="mb-8">

@@ -76,6 +76,11 @@ export default function Experience() {
                         <span className="text-[#00FF8C]">$</span> <span className="text-[#FFFFFF]">{experience.title}</span>
                       </h3>
                       <p className="text-gray-400 mb-2">{experience.period}</p>
+                      <ul className="mt-4 space-y-2 text-sm text-gray-300 text-left">
+                        {experience.responsibilities.map((item) => (
+                          <li key={item}><span className="text-[#00FF8C]">{'>'}</span> {item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                   
