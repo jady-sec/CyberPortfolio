@@ -8,199 +8,135 @@
   }
 
   :root {
-    --primary-green: #00FF8C;
-    --primary-red: #FF3E3E;
-    --background-dark: #121212;
-    --card-dark: #1A1A1A;
-    --text-dark: #ffffff;
-    --text-light: #1A1A1A;
-    --background-light: #f8f9fa;
-    --card-light: #ffffff;
-    
-    /* Default to light theme variables */
-    --background: var(--background-light);
-    --card: var(--card-light);
-    --text: var(--text-light);
+    --water-top: #0e7c86;
+    --water-deep: #041026;
+    --text-secondary: #ddfbff;
+    --thermocline: #7df2ff;
+
+    /* Used by the toast and other shared UI components */
+    --background: 222 81% 8%;
+    --foreground: 0 0% 100%;
+    --card: 222 81% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 81% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 186 100% 75%;
+    --primary-foreground: 222 81% 8%;
+    --secondary: 196 60% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 196 60% 20%;
+    --muted-foreground: 187 100% 93%;
+    --accent: 196 60% 20%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 187 40% 70%;
+    --input: 187 40% 70%;
+    --ring: 186 100% 75%;
+    --radius: 0.25rem;
   }
-  
-  /* Dark mode overrides */
-  .dark {
-    --background: var(--background-dark);
-    --card: var(--card-dark);
-    --text: var(--text-dark);
+
+  html {
+    color-scheme: dark;
+    scrollbar-color: var(--thermocline) var(--water-deep);
   }
-  
-  /* iOS specific overrides */
-  @media (prefers-color-scheme: dark) {
-    .system {
-      --background: var(--background-dark);
-      --card: var(--card-dark);
-      --text: var(--text-dark);
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
     }
   }
 
   body {
-    @apply font-sans antialiased;
-    background-color: var(--background);
-    color: var(--text) !important;
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(var(--water-top), var(--water-deep));
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  /* iOS Safari color-scheme support */
-  @supports (-webkit-touch-callout: none) {
-    html {
-      color-scheme: light dark;
+
+  ::selection {
+    background: var(--thermocline);
+    color: var(--water-deep);
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  :focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+  }
+
+  section[id] {
+    scroll-margin-top: 3.5rem;
+  }
+
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 0;
     }
   }
 }
 
 @layer components {
-  .matrix-bg {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .matrix-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(var(--primary-green) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.05;
+  .water {
+    position: fixed;
+    inset: 0;
     z-index: -1;
+    pointer-events: none;
   }
-  
-  .skill-bar {
-    transition: width 1.5s ease-in-out;
-  }
-  
-  .terminal-text {
-    font-family: 'JetBrains Mono', monospace;
-  }
-  
-  .terminal-container {
-    border: 1px solid var(--primary-green);
-    border-radius: 4px;
-    padding: 1rem;
+
+  .page {
     position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 3.25rem;
   }
-  
-  /* Terminal styling based on theme */
-  body.dark .terminal-container, .dark .terminal-container {
-    background-color: rgba(0, 0, 0, 0.7);
+
+  .section {
+    max-width: 64rem;
+    padding: 5rem 1.25rem;
   }
-  
-  body:not(.dark) .terminal-container, :not(.dark) .terminal-container {
-    background-color: rgba(245, 245, 245, 0.9);
-    color: var(--text-light);
-    border-color: var(--primary-green);
+
+  .section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin-bottom: 2rem;
   }
-  
-  .terminal-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-green), #007747, var(--primary-green));
-    background-size: 200% 100%;
-    animation: gradientMove 4s linear infinite;
+
+  .reading {
+    max-width: 68ch;
   }
-  
-  /* Theme-based section styling */
-  .section-bg-primary {
-    transition: background-color 0.3s ease;
-    background-color: var(--card);
+
+  .data {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
   }
-  
-  body.dark .section-bg-primary {
-    background-color: var(--card-dark);
+
+  .secondary {
+    color: var(--text-secondary);
   }
-  
-  body:not(.dark) .section-bg-primary {
-    background-color: var(--card-light);
-    border-color: #e0e0e0;
+
+  .row {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
   }
-  
-  /* Card styling for dark/light themes */
-  .theme-card {
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: var(--card);
-    color: var(--text);
-    border-color: rgba(0, 255, 140, 0.3);
-  }
-  
-  body.dark .theme-card {
-    background-color: var(--card-dark);
-    border-color: rgba(0, 255, 140, 0.3);
-  }
-  
-  body:not(.dark) .theme-card {
-    background-color: var(--card-light);
-    border-color: rgba(0, 180, 100, 0.3);
-    color: var(--text-light);
-  }
-  
-  /* Text color for paragraphs */
-  .theme-text {
-    transition: color 0.3s ease;
-    color: var(--text);
-  }
-  
-  body.dark .theme-text, .dark .theme-text {
-    color: #9ca3af; /* gray-400 in dark mode */
-  }
-  
-  body:not(.dark) .theme-text, :not(.dark) .theme-text {
-    color: #4b5563; /* gray-600 in light mode */
-  }
-  
-  /* Animations */
-  @keyframes gradientMove {
-    0% {
-      background-position: 0% 0%;
+
+  @media (min-width: 768px) {
+    .page {
+      padding-top: 0;
+      padding-left: 11rem;
     }
-    100% {
-      background-position: 200% 0%;
-    }
-  }
-  
-  .blink {
-    animation: blink 1s step-end infinite;
-  }
-  
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-  
-  /* iOS specific dark mode */
-  @media (prefers-color-scheme: dark) {
-    @supports (-webkit-touch-callout: none) {
-      .terminal-container {
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-      
-      .theme-card {
-        background-color: var(--card-dark);
-        color: var(--text-dark);
-      }
-      
-      .theme-text {
-        color: #9ca3af;
-      }
+
+    .section {
+      padding: 7rem 3.5rem;
     }
   }
 }

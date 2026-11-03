@@ -1,126 +1,98 @@
-import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
-function useTheme() {
-  return { theme: 'dark' };
-}
+const sections = [
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "certifications", label: "Certifications" },
+  { id: "experience", label: "Experience & Education" },
+  { id: "references", label: "References" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const { theme } = useTheme();
+  const [active, setActive] = useState("surface");
+  const [back, setBack] = useState("0.0");
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Handle scroll effect for navbar
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+    // Read from scroll position so the gauge stays right after a menu jump past several entries
+    const update = () => {
+      let section = "surface";
+      let years = "0.0";
+      document.querySelectorAll<HTMLElement>("section[id], [data-back]").forEach((element) => {
+        if (element.getBoundingClientRect().top > window.innerHeight / 2) return;
+        if (element.dataset.back) years = element.dataset.back;
+        else section = element.id;
+      });
+      setActive(section);
+      setBack(years);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const closeOnEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, []);
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const links = (onNavigate?: () => void) => sections.map(({ id, label }) => (
+    <li key={id}>
+      <a
+        href={`#${id}`}
+        onClick={onNavigate}
+        aria-current={active === id ? "true" : undefined}
+        className={`block py-1.5 no-underline hover:underline ${active === id ? "font-semibold text-white" : "secondary"}`}
+      >
+        {label}
+      </a>
+    </li>
+  ));
+
+  const activeLabel = sections.find(({ id }) => id === active)?.label;
+  const inTimeline = active === "experience";
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-[#1A1A1A]/90 backdrop-blur-lg shadow-md' 
-        : 'bg-transparent'
-    }`}>
-      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <span className="text-[#00FF8C] font-mono text-xl font-semibold">&gt;_jady.sh</span>
-        </div>
-
-        <div className="hidden md:flex items-center">
-          <div className="flex space-x-6 mr-4">
-            <a href="#about" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>About</a>
-            <a href="#experience" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Experience</a>
-            <a href="#skills" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Skills</a>
-            <a href="#certifications" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Certifications</a>
-            <a href="#testimonials" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Testimonials</a>
-            <a href="#contact" className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}>Contact</a>
+    <>
+      <nav aria-label="Sections" className="hidden md:flex fixed inset-y-0 left-0 z-20 w-44 flex-col justify-between border-r border-white/30 p-6">
+        <ul className="text-sm">{links()}</ul>
+        {inTimeline && (
+          <div>
+            <p className="data !text-3xl !text-white">{back}</p>
+            <p className="data">years back</p>
           </div>
-        </div>
-
-        <div className="md:hidden flex items-center space-x-4">
-          <button 
-            onClick={toggleMenu} 
-            className={`text-white hover:text-[#00FF8C] focus:outline-none`}
-            aria-label="Toggle mobile menu"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-        </div>
+        )}
       </nav>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden bg-[#1A1A1A] border-gray-800 w-full border-t transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
-          <a 
-            href="#about" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            About
-          </a>
-          <a 
-            href="#experience" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            Experience
-          </a>
-          <a 
-            href="#skills" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            Skills
-          </a>
-          <a 
-            href="#certifications" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            Certifications
-          </a>
-          <a 
-            href="#testimonials" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            Testimonials
-          </a>
-          <a 
-            href="#contact" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            Contact
-          </a>
-          <a 
-            href="https://medium.com/@fxrhanansari" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={`text-white hover:text-[#00FF8C] transition-colors duration-300`}
-            onClick={closeMenu}
-          >
-            Blog
-          </a>
+      <nav aria-label="Sections" className="md:hidden fixed inset-x-0 top-0 z-20 bg-[#041026]/90 backdrop-blur">
+        <div className="flex min-h-[3.25rem] items-center justify-between gap-4 px-5">
+          <span className="min-w-0 truncate text-sm font-semibold">{activeLabel}</span>
+          <div className="flex shrink-0 items-center gap-3">
+            {inTimeline && <span className="data">{back} yrs back</span>}
+            <button
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-expanded={menuOpen}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              className="-mr-2 p-2"
+            >
+              {menuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+        {menuOpen && <ul className="border-t border-white/30 px-5 py-3">{links(() => setMenuOpen(false))}</ul>}
+      </nav>
+    </>
   );
 }

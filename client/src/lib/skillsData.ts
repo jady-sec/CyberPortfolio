@@ -1,14 +1,14 @@
 export const skillsData = {
   cybersecurity: [
-    { name: "Vulnerability Assessment", percentage: 95 },
-    { name: "Endpoint Detection and Response", percentage: 88 },
-    { name: "Cloud Security (Azure)", percentage: 85 },
-    { name: "Threat Intelligence", percentage: 90 },
-    { name: "Scripting and Automation", percentage: 85 },
-    { name: "Penetration Testing", percentage: 82 },
-    { name: "Security Architecture", percentage: 86 },
-    { name: "Incident Response Planning", percentage: 89 },
-    { name: "Malware Analysis", percentage: 87 }
+    "Vulnerability Assessment",
+    "Endpoint Detection and Response",
+    "Cloud Security (Azure)",
+    "Threat Intelligence",
+    "Scripting and Automation",
+    "Penetration Testing",
+    "Security Architecture",
+    "Incident Response Planning",
+    "Malware Analysis"
   ],
   technicalStack: {
     "Security Tools": [

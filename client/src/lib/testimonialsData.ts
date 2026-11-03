@@ -17,7 +17,7 @@ export const testimonialsData = [
   },
   {
     name: "Yokash Shanmugam",
-    position: "Cyber Security Analyst at ArticWolf",
+    position: "Cyber Security Analyst at Arctic Wolf",
     testimonial: "Working alongside Joseph was an incredible learning experience. His methodical approach to incident response and ability to remain calm under pressure is something I continue to emulate in my own career.",
     relation: "Colleague",
     image: "/assets/testimonials/yokash.jpeg",
